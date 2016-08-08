@@ -4,15 +4,15 @@ using System.Linq;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(kurthutchinson_dot_com.Startup))]
+[assembly: OwinStartup(typeof(KurtHutchinson.Web.Startup))]
 
-namespace kurthutchinson_dot_com
+namespace KurtHutchinson.Web
 {
     public partial class Startup
     {
         public void Configuration(IAppBuilder app)
         {
-            ConfigureAuth(app);
+            //ConfigureAuth(app);
         }
     }
 }

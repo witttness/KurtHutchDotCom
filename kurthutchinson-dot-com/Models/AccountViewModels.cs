@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace kurthutchinson_dot_com.Models
+namespace KurtHutchinson.Web.Models
 {
     // Models returned by AccountController actions.
     public class ExternalLoginConfirmationViewModel

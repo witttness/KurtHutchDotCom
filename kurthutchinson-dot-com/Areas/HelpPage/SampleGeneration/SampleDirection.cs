@@ -1,4 +1,4 @@
-namespace kurthutchinson_dot_com.Areas.HelpPage
+namespace KurtHutchinson.Web.Areas.HelpPage
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response

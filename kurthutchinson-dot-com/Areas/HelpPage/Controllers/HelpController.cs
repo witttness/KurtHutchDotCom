@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using kurthutchinson_dot_com.Areas.HelpPage.ModelDescriptions;
-using kurthutchinson_dot_com.Areas.HelpPage.Models;
+using KurtHutchinson.Web.Areas.HelpPage.ModelDescriptions;
+using KurtHutchinson.Web.Areas.HelpPage.Models;
 
-namespace kurthutchinson_dot_com.Areas.HelpPage.Controllers
+namespace KurtHutchinson.Web.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

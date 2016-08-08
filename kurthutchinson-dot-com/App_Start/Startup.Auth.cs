@@ -8,10 +8,10 @@ using Microsoft.Owin.Security.DataProtection;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using kurthutchinson_dot_com.Models;
-using kurthutchinson_dot_com.Providers;
+using KurtHutchinson.Web.Models;
+using KurtHutchinson.Web.Providers;
 
-namespace kurthutchinson_dot_com
+namespace KurtHutchinson.Web
 {
     public partial class Startup
     {

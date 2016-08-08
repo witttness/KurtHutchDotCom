@@ -10,9 +10,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
-using kurthutchinson_dot_com.Models;
+using KurtHutchinson.Web.Models;
 
-namespace kurthutchinson_dot_com.Controllers
+namespace KurtHutchinson.Web.Controllers
 {
     [Authorize]
     public class MeController : ApiController

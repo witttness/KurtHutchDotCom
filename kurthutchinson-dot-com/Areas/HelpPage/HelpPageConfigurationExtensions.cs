@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using kurthutchinson_dot_com.Areas.HelpPage.ModelDescriptions;
-using kurthutchinson_dot_com.Areas.HelpPage.Models;
+using KurtHutchinson.Web.Areas.HelpPage.ModelDescriptions;
+using KurtHutchinson.Web.Areas.HelpPage.Models;
 
-namespace kurthutchinson_dot_com.Areas.HelpPage
+namespace KurtHutchinson.Web.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {
