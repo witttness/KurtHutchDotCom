@@ -25,10 +25,11 @@
             "ui.highlight",
             "ui.scrollpoint",
             "ui.validate",
+            "angular-magnificent"
         ])
         .constant("_", window._)
         .config(["$stateProvider", "$urlRouterProvider", "$locationProvider", function ($stateProvider, $urlRouterProvider, $locationProvider) {
-
+            console.log("app-config");
             $locationProvider.html5Mode(true);
 
             $urlRouterProvider

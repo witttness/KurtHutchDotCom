@@ -5,6 +5,7 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+@import "angular-magnificent.css";
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6881,5 +6882,14 @@ legend {
   position: fixed;
 }
 body {
-  padding: 15px;
+  margin-bottom: 65px;
+}
+.big-slide {
+  height: 100%;
+}
+.big-slide .carousel,
+.big-slide .item,
+.big-slide .active,
+.big-slide .carousel-inner {
+  height: 100%;
 }

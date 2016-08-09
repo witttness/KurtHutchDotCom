@@ -57,7 +57,7 @@ namespace KurtHutchinson.Web
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/kurt-scripts")
-                .IncludeDirectory("~/Scripts/polyfills", "*.js")
+                .IncludeDirectory("~/Scripts/polyfills", "*.js", true)
                 .Include("~/Scripts/lodash.js",
                          "~/Scripts/angular.js",
                          "~/Scripts/angular-ui/ui-bootstrap.js",
@@ -71,12 +71,13 @@ namespace KurtHutchinson.Web
                          "~/Scripts/angular-cookies.js",
                          "~/Scripts/angular-touch.js",
                          "~/Scripts/angular-resource.js",
-                         "~/Scripts/angular-aria.js")
+                         "~/Scripts/angular-aria.js",
+                         "~/Scripts/angular-magnificent.js")
                 );
 
             bundles.Add(new ScriptBundle("~/bundles/kurt-app")
                 .Include("~/App/app.js")
-                .IncludeDirectory("~/App/site", "*.js"));
+                .IncludeDirectory("~/App/site", "*.js", true));
         }
     }
 }

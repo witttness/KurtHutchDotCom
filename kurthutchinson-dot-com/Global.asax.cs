@@ -18,10 +18,10 @@ namespace KurtHutchinson.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            var formatters = GlobalConfiguration.Configuration.Formatters;
-            var jsonFormatter = formatters.JsonFormatter;
-            var settings = jsonFormatter.SerializerSettings;
-            settings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
+            //var formatters = GlobalConfiguration.Configuration.Formatters;
+            //var jsonFormatter = formatters.JsonFormatter;
+            //var settings = jsonFormatter.SerializerSettings;
+            //settings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
