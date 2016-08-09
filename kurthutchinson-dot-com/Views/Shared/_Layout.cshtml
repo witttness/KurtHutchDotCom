@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en-us" ng-app="app">
-<head>
+<head ng-controller="HeadController">
     <meta charset="utf-8" />
     <base href="/" />
     <title ng-bind="(titl ? title + ' | ' : '') + 'KurtHutchinson.com'">@ViewBag.Title - KurtHutchinson.com</title>
@@ -9,9 +9,11 @@
     @Styles.Render("~/bundles/kurt-styles")
     @*@Styles.Render("~/Content/css")*@
     @*@Scripts.Render("~/bundles/modernizr")*@
+    @*<style type="text/css" ng-bind="dynamicCss"></style>*@
+    <link href="~/Content/the-show/the-show.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div ui-view>
             @RenderBody()
         </div>
@@ -24,7 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Kurt Hutchinson Photography", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("KURT HUTCHINSON PHOTOGRAPHY", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">

@@ -247,6 +247,7 @@
     <Content Include="App\site\controllers\AboutController.js" />
     <Content Include="App\site\controllers\BlogController.js" />
     <Content Include="App\site\controllers\ContactController.js" />
+    <Content Include="App\site\controllers\HeadController.js" />
     <Content Include="App\site\controllers\HomeController.js" />
     <Content Include="App\site\controllers\PortfolioController.js" />
     <Content Include="App\site\views\about.html" />
@@ -262,6 +263,14 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\kurt.jpg" />
+    <Content Include="Content\the-show\pattern.png" />
+    <Content Include="Content\the-show\slide-1.png" />
+    <Content Include="Content\the-show\slide-2.png" />
+    <Content Include="Content\the-show\slide-3.png" />
+    <Content Include="Content\the-show\slide-4.png" />
+    <Content Include="Content\the-show\slide-5.png" />
+    <Content Include="Content\the-show\slide-6.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\styles.css">
       <DependentUpon>styles.less</DependentUpon>
@@ -269,6 +278,7 @@
     <Content Include="Content\styles.min.css">
       <DependentUpon>styles.css</DependentUpon>
     </Content>
+    <Content Include="Content\the-show\the-show.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
