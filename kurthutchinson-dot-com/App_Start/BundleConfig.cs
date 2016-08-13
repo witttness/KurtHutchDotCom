@@ -72,7 +72,11 @@ namespace KurtHutchinson.Web
                          "~/Scripts/angular-touch.js",
                          "~/Scripts/angular-resource.js",
                          "~/Scripts/angular-aria.js",
-                         "~/Scripts/angular-magnificent.js")
+                         "~/Scripts/angular-storage.js",
+                         "~/Scripts/angular-jwt.js",
+                         "~/Scripts/auth0-angular.js",
+                         "~/Scripts/lock-9.0.js",
+                         "~/Scripts/angular-lock.js")
                 );
 
             bundles.Add(new ScriptBundle("~/bundles/kurt-app")

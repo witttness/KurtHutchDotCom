@@ -62,7 +62,7 @@
             //mouseMove: function(e){}	// Optional event: if enabled, fires whenever the mouse is moved inside the page body
         };
 
-        $log.info("mag", $scope.magnificent);
+        //$log.info("mag", $scope.magnificent);
     }
 
 })();
