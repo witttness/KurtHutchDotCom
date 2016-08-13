@@ -1,0 +1,12 @@
+﻿<div class="row">
+    <div class="col-md-12">
+
+        
+        <h1>
+            <img src="{{auth.profile.picture}}" alt="profile picture" class="img-circle" /> Welcome, {{auth.profile.given_name || auth.profile.nickname.split(" ")[0]}}
+        </h1>
+
+        <pre><code>{{auth.profile}}</code></pre>
+
+    </div>
+</div>

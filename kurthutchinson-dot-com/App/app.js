@@ -50,10 +50,18 @@
                     })
                     .state("login", {
                         url: "/login",
-                        templateUrl: "/App/site/login/login.html",
+                        templateUrl: "/App/site/login/index.html",
                         controller: "LoginController",
                         data: {
                             displayName: "Login"
+                        }
+                    })
+                    .state("user-profile", {
+                        url: "/user-profile",
+                        templateUrl: "/App/site/user-profile/index.html",
+                        controller: "UserProfileController",
+                        data: {
+                            displayName: "User Profile"
                         }
                     })
                     .state("about", {
@@ -89,7 +97,8 @@
                 authProvider.init({
                     domain: AUTH0_DOMAIN,
                     clientID: AUTH0_CLIENT_ID,
-                    loginUrl: '/login'
+                    callbackURL: "/user-profile",
+                    loginState: 'login'
                 });
 
                 //Called when login is successful
@@ -100,7 +109,7 @@
                         store.set('token', idToken);
                     });
                     //$location.path('/');
-                    $state.go("home");
+                    $state.go("user-profile");
                 }]);
 
                 authProvider.on('loginFailure', ["$log", function ($log) {
@@ -108,7 +117,7 @@
                     $log.error("Error loggin in!");
                 }]);
 
-                authProvider.on('authenticated', ["$location", function ($location) {
+                authProvider.on('authenticated', ["$location", "$log", function ($location, $log) {
                     $log.info("Authenticated");
 
                 }]);
@@ -124,5 +133,27 @@
             }])
         .run(["$rootScope", function ($rootScope) {
             $rootScope._ = window._;
+        }])
+        .run(['auth', function (auth) {
+            // This hooks all auth events to check everything as soon as the app starts
+            auth.hookEvents();
+        }])
+        .run(["$rootScope", "$location", "auth", "store", "jwtHelper", function ($rootScope, $location, auth, store, jwtHelper) {
+            $rootScope.$on('$locationChangeStart', function () {
+
+                var token = store.get('token');
+                if (token) {
+                    if (!jwtHelper.isTokenExpired(token)) {
+                        if (!auth.isAuthenticated) {
+                            //Re-authenticate user if token is valid
+                            auth.authenticate(store.get('profile'), token);
+                        }
+                    } else {
+                        // Either show the login page or use the refresh token to get a new idToken
+                        //$location.path('/');
+                        $state.go("login");
+                    }
+                }
+            });
         }]);
 })();
