@@ -6,7 +6,7 @@
             <img src="{{auth.profile.picture}}" alt="profile picture" class="img-circle" /> Welcome, {{auth.profile.given_name || auth.profile.nickname.split(" ")[0]}}
         </h1>
 
-        <pre><code>{{auth.profile}}</code></pre>
+        <pre>{{auth.profile | json}}</pre>
 
     </div>
 </div>
